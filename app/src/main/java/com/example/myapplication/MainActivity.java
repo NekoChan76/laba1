@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //id search
         final EditText editText1 = findViewById(R.id.editText2);
         final EditText editText2 = findViewById(R.id.editText3);
         Button button1 = findViewById(R.id.button);
@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Button button3 = findViewById(R.id.button3);
         Button button4 = findViewById(R.id.button4);
         TextView textView = findViewById(R.id.textView4);
-
+        //restriction that the user could write only numbers
         editText1.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         editText2.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-
+        //actions for buttons
         button1.setOnClickListener(v -> {
                 textView.setText(String.valueOf(Double.valueOf(editText1.getText().toString()) * (Double.valueOf(editText2.getText().toString()))));
         });
